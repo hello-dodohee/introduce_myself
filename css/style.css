@@ -4,7 +4,6 @@ body {
     padding:20px;
 }
 #wrap {width:100%;}
-footer{width:100%; height:200px; background:#444;}
 
 /* 헤더 */
 header{
@@ -30,61 +29,274 @@ header{
     text-align:center;
     margin: 40px auto;
 }
-.gnb ul li a{display:block;height:40px;color:#000; font-size:20px; line-height:40px;}
-
-#home{width:100%; height:100vh; background-image:url(../img/IMG_0231.JPG); background-size:cover;}
-#home .titlebox{
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.gnb ul li a{
+    display:block;
+    height:40px;
+    color:#000;
+    font-size:20px;
+    line-height:40px;
+    font-weight:500;
 }
-#home .titlebox .textbox h1{
+
+#home{width:100%; height:100vh; background-image:url(../img/IMG_0231.JPG); background-size:cover; position:relative; margin-bottom:50px;}
+#home .textbox {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+#home .textbox h1{
     font-size:70px;
-    margin-top:150px;
     text-align:center;
     color:#fff;
     font-weight:bold;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
-#home .titlebox .textbox h2{
+#home .textbox h2{
+    margin:150px 0;
     font-size:30px;
-    margin-top:150px;
     text-align:center;
     color:#fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
-#home .titlebox .textbox h3{
-    margin-top:150px;
-    margin-bottom:0;
+#home .textbox h3{
     text-align:center;
     color:#fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    line-height:1.5em;
+    font-family: 'GmarketSansMedium';
 }
 .scroll{
-    height:100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position:absolute;
+    left:50%;
+    bottom:10%;
+    transform:translate(-10%,-50%);
+    animation:mouse 1.5s infinite;
 }
-#about{
-    width:100%; 
-    height:1600px;
-    background: linear-gradient(90deg, #fcaa5ea1,#d0a7ff9f,#84c8ffb7) fixed;
+
+/* 마우스 아이콘 애니메이션 */
+
+@keyframes mouse{
+    from{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0px);
+        opacity:1;
+    }
 }
-.tabmenu {
-    width:80%;
-    height:700px;
+
+/* about */
+
+#about {
+    width:100%;
+    height:100vh;
+    background-image:url(../img/IMG_8157.jpg); background-size:cover;
+    box-shadow: 0 0 30px -20px;
+    margin-bottom:50px;
+}
+#about .container{
     margin:0 auto;
-    background:#000;
+    padding:150px 0;
+}
+
+/* 탭메뉴 시작 */
+
+#about .container .tabmenu{
+    border-radius:20px;
+    width:65%;
+    height:60px;
+    background:rgba(255, 255, 255, 0.8);
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+#about .container .tabmenu li{
+    width:30%;
+    text-align:center;
+    line-height:60px;
+    font-size:20px;
+    position:relative;
+}
+#about .container .tabmenu li.on{
+    position:relative;
+    color:cornflowerblue;
+    font-weight:bold;
+}
+#about .container .tabmenu li.on:after{
+    position: absolute;
+    display: block;
+    content: "";
+    left: 120px;
+    height: 3px;
+    top: 45px;
+    width:120px;
+    background-color: cornflowerblue;
+}
+
+/* 탭메뉴 완성 */
+
+/* 탭메뉴 컨텐츠 시작 */
+#about .container .content{
+    width:65%;
+    height:600px;
+    background:rgba(100, 148, 237, 0.8);
+    border-radius:20px;
+    margin:20px auto;
+}
+#about .container .content .tab{
+    width:100%;
+    height:520px;
+    padding:30px;
+    box-sizing:border-box;
+}
+#about .container .content .tab:first-child{
+    display:none;
+}
+#about .container .content .tab:nth-child(2){
+    display:none;
+}
+#about .container .content .tab:last-child{
+    display:block;
+}
+#about .container .content .tab .imgbox{
+    width:35%;
+    height:inherit;
+    background:#fff;
+    float:left;
+    margin-right:50px;
+}
+#about .container .content .tab .imgbox img{
+    width:100%;
+    height:inherit;
+}
+#about .container .content .tab .textbox{
+    float:left;
+    height:auto;
+    width: 60%;
+    color:#fff;
+    padding:30px;
     box-sizing: border-box;
+}
+#about .container .content .tab .textbox p{
+    font-size: 18px;
+    line-height:1.7em;
+    padding:0 10px;
+    font-family: 'GmarketSansMedium';
+}
+#about .container .content .tab .textbox h3{
+    margin:30px 0;
+    width: 170px;
+    height: 25px;
+    background:#fff;
+    border-radius: 10px;
+    color:#000;
+    line-height:25px;
+    text-align:center;
+}
+#about .container .content .tab .interest {
+    width:100%;
+    height:inherit;
+}
+#about .container .content .tab .interest .interestbox {
+    display: flex;
+    flex-wrap:wrap;
+}
+#about .container .content .tab .interest .interestbox li{
+    flex: 1 1 25%;
+    height:140px;
+    margin:20px;
+    border-radius:20px;
+    overflow:hidden;
+}
+#about .container .content .tab .interest .interestbox li p{
+    font-size: 25px;
+    text-align:center;
+    line-height:140px;
+    font-family: 'GmarketSansMedium';
+}
+#about .container .content .tab .interest .interestbox li p:before{
+    color:#fff;
+    font-weight:bold;
+    display:block;
+}
+#about .container .content .tab .interest .interestbox li .h:hover:before{
+    content:"베이킹,사진찍기 😝";
+}
+#about .container .content .tab .interest .interestbox li .f:hover:before{
+    content:"곱창,초밥,고기 🤤";
+}
+#about .container .content .tab .interest .interestbox li .m:hover:before{
+    content:"ISFP & INFP 🧐";
+}
+#about .container .content .tab .interest .interestbox li .p:hover:before{
+    content:"도도 (말시츄) 🐶";
+}
+#about .container .content .tab .interest .interestbox li .b:hover:before{
+    content:"1996년 10월 1일 🥳";
+}
+#about .container .content .tab .interest .interestbox li .s:hover:before{
+    content:"볼링 🎳";
+}
+#about .container .content .tab .interest .interestbox li .d:hover:before{
+    content:"아이스 아메리카노 ☕️";
+}
+#about .container .content .tab .interest .interestbox li .bl:hover:before{
+    content:"B형! 💁‍♀️";
+}
+#about .container .content .tab .interest .interestbox li .t:hover:before{
+    content:"싱가폴,홍콩,마카오 추천! 👍";
+}
+#about .container .content .tab .skill{
+    width:100%;
+    display:flex;
+    padding:30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap:wrap;
+}
+#about .container .content .tab .skill li{
+    flex: 1 1 30%;
+    text-align:center;
+}
+#about .container .content .tab .skill li img{
+    width:200px;
+    height:200px;
+    border-radius: 50px;
+    margin-bottom:30px;
+}
+#about .container .content .tab .skill li p{
+    font-size:18px;
+    padding:20px 40px;
+    line-height:1.5em;
+    font-family: 'GmarketSansMedium';
+}
+
+
+footer{
+    width:100%;
+    height:300px;
+    background-image:url(../img/IMG_0231.JPG); background-size:cover;
+    padding:30px 100px;
+    box-sizing: border-box;
+}
+.link{
+    width:30%;
+    height:100px;
+    margin:50px auto;
+}
+.link ul li{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
     
 }
-.tabmenu ul{
-    display:flex;
-    padding-top:80px;
+.link ul li a{
+    font-size:50px;
+    color:#222;
+
 }
-.tabmenu ul li{
+footer p{
     text-align:center;
-    flex:1;
 }
