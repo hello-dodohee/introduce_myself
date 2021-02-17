@@ -40,35 +40,39 @@
 
         <section id="about">
             <div class="container">
-                <ul class="tabmenu">
-                    <li>PROFILE</li>
-                    <li class="on">INTEREST</li>
-                    <li>SKILL</li>
-                </ul>
-                <ul class="content">
-                    <li class="on tab">
-                        <div class="imgbox">
-                            <img src="./img/dohee.jpeg" alt="도희사진">
-                        </div>
-                        <div class="textbox">
-                            <p>안녕하세요! 위코드 19기 김도희입니다.😄</p>
-                            <h3>WHY >WECODE ?</h3>
-                            <p>온라인에 관련된 업무를 많이 하다보니 자연스럽게 HTML을 알게 되었고,
-                            더 자세히 배우면 업무에 도움이 될 것 같아 국비지원을 신청하여
-                            퍼블리셔 과정을 들으면서 처음 코딩을 배우게 되었습니다.</br>
-                            내가 만든 결과물이 바로 눈으로 확인 할 수 있고 여러가지 부분들이
-                            제 업무 성격과 맞는 것 같아 직종을 변경하기로 생각하고
-                            취업준비를 하다가 더 완벽한 실력으로 끌어올리고 싶은 욕심이 생겨
-                            위코드를 찾아오게 되었습니다.</p>
-                            <h3>IN THE FUTURE</h3>
-                            <p>위코드에서 동기들과 적극적으로 협력하고, 항상 으쌰으쌰 할 수 있는
-                            그런 동기가 되고 싶고, 리액트와 리액트 네이티브 공부를 꼼꼼히하여 
-                            훨씬 발전 된 모습으로 위코드를 졸업하고 싶습니다.
+                <div class="content">
+                    <input type="radio" name="tabmenu" id="tab01" checked>
+                    <label for="tab01">PROFILE</label>
+                    <input type="radio" name="tabmenu" id="tab02">
+                    <label for="tab02">INTEREST</label>
+                    <input type="radio" name="tabmenu" id="tab03">
+                    <label for="tab03">SKILL</label>
+
+                    <div class="conbox con1">
+                        <div class="profile_box">
+                            <div class="imgbox">
+                                <img src="./img/dohee.jpeg" alt="도희사진">
+                            </div>
+                            <div class="textbox">
+                                <p>안녕하세요! 위코드 19기 김도희입니다.😄</p>
+                                <h3>WHY >WECODE ?</h3>
+                                <p>온라인에 관련된 업무를 많이 하다보니 자연스럽게 HTML을 알게 되었고,
+                                더 자세히 배우면 업무에 도움이 될 것 같아 국비지원을 신청하여
+                                퍼블리셔 과정을 들으면서 처음 코딩을 배우게 되었습니다.</br>
+                                내가 만든 결과물이 바로 눈으로 확인 할 수 있고 여러가지 부분들이
+                                제 업무 성격과 맞는 것 같아 직종을 변경하기로 생각하고
+                                취업준비를 하다가 더 완벽한 실력으로 끌어올리고 싶은 욕심이 생겨
+                                위코드를 찾아오게 되었습니다.</p>
+                                <h3>IN THE FUTURE</h3>
+                                <p>위코드에서 동기들과 적극적으로 협력하고, 항상 으쌰으쌰 할 수 있는
+                                그런 동기가 되고 싶고, 리액트와 리액트 네이티브 공부를 꼼꼼히하여 
+                                훨씬 발전 된 모습으로 위코드를 졸업하고 싶습니다.
+                                </p>
                             </p>
-                        </p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="tab">
+                    </div>
+                    <div class="conbox con2">
                         <div class="interest">
                             <ul class="interestbox">
                                 <li><p class="h">취미</p></li>
@@ -82,31 +86,33 @@
                                 <li><p class="t">여행지</p></li>
                             </ul>
                         </div>
-                    <li class="tab">
-                        <ul class="skill">
-                            <li>
-                                <img src="img/html5.png" alt="html아이콘">
-                                <p class="top">웹 표준/접근성에 대해 이해하고
-                                다양한 종류와 버전에 따른
-                                브라우저에 맞게 마크업합니다.</p>
-                                <p class="bottom">HTML 개념을 이해하고 있으며, 보기 편하게 HTML 구조를 설계할 수 있습니다.</p>
-                            </li>
-                            <li>
-                                <img src="img/css.png" alt="css아이콘">
-                                <p class="top">CSS를 이용하여 디자인 시안에 맞는 다양한 동작 효과를 이용하여 웹사이트를 제작할 수 있습니다.</p>
-                                <p class="bottom">미디어쿼리를 이용한 반응형 사이트를 제작하여 다양한 기기에 맞는 웹 사이트 제작이 가능합니다.</p>
-                            </li>
-                            <li>
-                                <img src="img/js.png" alt="js아이콘">
-                                <p class="top">CSS보다 더 동적인 효과를 주기위해 제이쿼리와 자바스크립트를 이용한 코딩이 가능합니다.</p>
-                                <p class="bottom">공유가 가능한 자바스크립트(플러그인)을 이용하여 스크립트 효과를 줄 수 있습니다.</p>
-                            </li>
-                        </ul>  
-                    </li>
-                </ul>
+                    </div>
+                    <div class="conbox con3">
+                        <div class="skillbox">
+                            <ul class="skill">
+                                <li>
+                                    <img src="img/html5.png" alt="html아이콘">
+                                    <p class="top">웹 표준/접근성에 대해 이해하고
+                                    다양한 종류와 버전에 따른
+                                    브라우저에 맞게 마크업합니다.</p>
+                                    <p class="bottom">HTML 개념을 이해하고 있으며, 보기 편하게 HTML 구조를 설계할 수 있습니다.</p>
+                                </li>
+                                <li>
+                                    <img src="img/css.png" alt="css아이콘">
+                                    <p class="top">CSS를 이용하여 디자인 시안에 맞는 다양한 동작 효과를 이용하여 웹사이트를 제작할 수 있습니다.</p>
+                                    <p class="bottom">미디어쿼리를 이용한 반응형 사이트를 제작하여 다양한 기기에 맞는 웹 사이트 제작이 가능합니다.</p>
+                                </li>
+                                <li>
+                                    <img src="img/js.png" alt="js아이콘">
+                                    <p class="top">CSS보다 더 동적인 효과를 주기위해 제이쿼리와 자바스크립트를 이용한 코딩이 가능합니다.</p>
+                                    <p class="bottom">공유가 가능한 자바스크립트(플러그인)을 이용하여 스크립트 효과를 줄 수 있습니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
         <footer id="contact">
             <div class="link">
                 <ul>
@@ -122,8 +128,5 @@
         </footer>
     </div>
 </body>
-<script
-      src="https://kit.fontawesome.com/6478f529f2.js"
-      crossorigin="anonymous"
-    ></script>
+<script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </html>

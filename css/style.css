@@ -97,95 +97,96 @@ header{
     margin-bottom:50px;
 }
 #about .container{
-    margin:0 auto;
-    padding:150px 0;
-}
-
-/* 탭메뉴 시작 */
-
-#about .container .tabmenu{
-    border-radius:20px;
     width:65%;
-    height:60px;
-    background:rgba(255, 255, 255, 0.8);
+    height:inherit;
     margin:0 auto;
-    display:flex;
-    justify-content: space-between;
+    padding:100px 0;
+    box-sizing: border-box;
 }
-#about .container .tabmenu li{
+#about .container .content{
+    width:100%;
+    height:700px;
+    background:rgba(100, 148, 237, 0.8);
+    border-radius:20px;
+    margin:0 auto;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    border-radius:20px;
+    font-size: 20px;
+    height:60px;
     width:30%;
-    text-align:center;
-    line-height:60px;
-    font-size:20px;
-    position:relative;
+    margin:30px 10px;
+    float:left;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
 }
-#about .container .tabmenu li.on{
-    position:relative;
+input[type="radio"]:first-child + label{
+    margin-left:35px;
+}
+input[type="radio"]:checked + label {
     color:cornflowerblue;
     font-weight:bold;
 }
-#about .container .tabmenu li.on:after{
-    position: absolute;
-    display: block;
-    content: "";
-    left: 120px;
-    height: 3px;
-    top: 45px;
-    width:120px;
-    background-color: cornflowerblue;
-}
 
-/* 탭메뉴 완성 */
-
-/* 탭메뉴 컨텐츠 시작 */
-#about .container .content{
-    width:65%;
-    height:600px;
-    background:rgba(100, 148, 237, 0.8);
-    border-radius:20px;
-    margin:20px auto;
-}
-#about .container .content .tab{
+.conbox{
     width:100%;
-    height:520px;
-    padding:30px;
-    box-sizing:border-box;
-}
-#about .container .content .tab:first-child{
+    height:700px;
     display:none;
+    animation:fadeIn 1s linear;
 }
-#about .container .content .tab:nth-child(2){
-    display:none;
+
+@keyframes fadeIn{
+    from{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    to{
+        transform:none;
+        opacity:1;
+    }
 }
-#about .container .content .tab:last-child{
-    display:block;
+input[id="tab01"]:checked ~ .con1{display:block;}
+input[id="tab02"]:checked ~ .con2{display:block;}
+input[id="tab03"]:checked ~ .con3{display:block;}
+        
+#about .container .content .con1 .profile_box{
+    margin:0 auto;
+    width:95%;
+    padding:0 10px;
+    box-sizing: border-box;
 }
-#about .container .content .tab .imgbox{
+
+#about .container .content .con1 .imgbox{
     width:35%;
-    height:inherit;
-    background:#fff;
     float:left;
-    margin-right:50px;
+    margin-top:35px;
+    margin-right:40px;
 }
-#about .container .content .tab .imgbox img{
+#about .container .content .con1 .imgbox img{
     width:100%;
-    height:inherit;
+    border-radius: 20px;
 }
-#about .container .content .tab .textbox{
+#about .container .content .con1 .textbox{
     float:left;
     height:auto;
     width: 60%;
     color:#fff;
-    padding:30px;
+    padding:20px 0px;
     box-sizing: border-box;
 }
-#about .container .content .tab .textbox p{
+#about .container .content .con1 .textbox p{
     font-size: 18px;
     line-height:1.7em;
     padding:0 10px;
     font-family: 'GmarketSansMedium';
 }
-#about .container .content .tab .textbox h3{
+#about .container .content .con1 .textbox h3{
     margin:30px 0;
     width: 170px;
     height: 25px;
@@ -195,85 +196,89 @@ header{
     line-height:25px;
     text-align:center;
 }
-#about .container .content .tab .interest {
+/* profile box end */
+
+#about .container .content .con2 .interest {
     width:100%;
     height:inherit;
+    float:left;
 }
-#about .container .content .tab .interest .interestbox {
+#about .container .content .con2 .interest .interestbox {
     display: flex;
     flex-wrap:wrap;
 }
-#about .container .content .tab .interest .interestbox li{
+#about .container .content .con2 .interest .interestbox li{
     flex: 1 1 25%;
     height:140px;
     margin:20px;
     border-radius:20px;
     overflow:hidden;
 }
-#about .container .content .tab .interest .interestbox li p{
+#about .container .content .con2 .interest .interestbox li p{
     font-size: 25px;
     text-align:center;
     line-height:140px;
     font-family: 'GmarketSansMedium';
 }
-#about .container .content .tab .interest .interestbox li p:before{
+#about .container .content .con2 .interest .interestbox li p:before{
     color:#fff;
     font-weight:bold;
     display:block;
 }
-#about .container .content .tab .interest .interestbox li .h:hover:before{
+#about .container .content .con2 .interest .interestbox li .h:hover:before{
     content:"베이킹,사진찍기 😝";
 }
-#about .container .content .tab .interest .interestbox li .f:hover:before{
+#about .container .content .con2 .interest .interestbox li .f:hover:before{
     content:"곱창,초밥,고기 🤤";
 }
-#about .container .content .tab .interest .interestbox li .m:hover:before{
+#about .container .content .con2 .interest .interestbox li .m:hover:before{
     content:"ISFP & INFP 🧐";
 }
-#about .container .content .tab .interest .interestbox li .p:hover:before{
+#about .container .content .con2 .interest .interestbox li .p:hover:before{
     content:"도도 (말시츄) 🐶";
 }
-#about .container .content .tab .interest .interestbox li .b:hover:before{
+#about .container .content .con2 .interest .interestbox li .b:hover:before{
     content:"1996년 10월 1일 🥳";
 }
-#about .container .content .tab .interest .interestbox li .s:hover:before{
+#about .container .content .con2 .interest .interestbox li .s:hover:before{
     content:"볼링 🎳";
 }
-#about .container .content .tab .interest .interestbox li .d:hover:before{
+#about .container .content .con2 .interest .interestbox li .d:hover:before{
     content:"아이스 아메리카노 ☕️";
 }
-#about .container .content .tab .interest .interestbox li .bl:hover:before{
+#about .container .content .con2 .interest .interestbox li .bl:hover:before{
     content:"B형! 💁‍♀️";
 }
-#about .container .content .tab .interest .interestbox li .t:hover:before{
+#about .container .content .con2 .interest .interestbox li .t:hover:before{
     content:"싱가폴,홍콩,마카오 추천! 👍";
 }
-#about .container .content .tab .skill{
+#about .container .content .con3 .skill{
     width:100%;
     display:flex;
-    padding:30px;
+    padding:20px;
     box-sizing: border-box;
     display: flex;
     flex-wrap:wrap;
 }
-#about .container .content .tab .skill li{
+#about .container .content .con3 .skill li{
     flex: 1 1 30%;
     text-align:center;
+    margin-top:30px;
 }
-#about .container .content .tab .skill li img{
-    width:200px;
-    height:200px;
+#about .container .content .con3 .skill li img{
+    width:150px;
+    height:150px;
     border-radius: 50px;
     margin-bottom:30px;
 }
-#about .container .content .tab .skill li p{
+#about .container .content .con3 .skill li p{
     font-size:18px;
-    padding:20px 40px;
+    padding:20px 30px;
     line-height:1.5em;
     font-family: 'GmarketSansMedium';
 }
 
-
+/* footer */
 footer{
     width:100%;
     height:300px;
@@ -294,7 +299,7 @@ footer{
 }
 .link ul li a{
     font-size:50px;
-    color:#222;
+    color:#333;
 
 }
 footer p{
